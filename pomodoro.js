@@ -1,8 +1,10 @@
-let min = 25;
-let segs = 0;
+let min = 0;
+let segs = 10;
 let count = 1;
 let timer;
 let br = false;
+let music = null;
+const alarm = document.getElementById('alarm');
 
 function start() {
     document.querySelector('#stop').style.display = "block";
@@ -13,11 +15,15 @@ function start() {
 
     document.querySelector('#label').innerHTML = ("Session " + count);
 
+    if (music) {
+        music.play();
+    }
+
     timer = setInterval( function() {  
         if (segs != 0) {
             segs--;
         } else {
-            segs = 10;
+            segs = 59;
             min--;
         }
 
@@ -31,6 +37,10 @@ function start() {
             document.querySelector('#label').style.display = "none";
             document.querySelector('#startB').style.display = "block";
             document.querySelector('#stop').style.display = "none";
+            if (music) {
+                music.pause();
+            }
+            alarm.play();
         }
     }, 1000);
 }
@@ -50,7 +60,7 @@ function coffeeTime() {
         if (segs != 0) {
             segs--;
         } else {
-            segs = 10;
+            segs = 59;
             min--;
         }
 
@@ -62,6 +72,10 @@ function coffeeTime() {
             reset();
             document.querySelector('#start').style.display = "block";
             document.querySelector('#stop').style.display = "none";
+            if (music) {
+                music.pause();
+            }
+            alarm.play();
             count ++;
         }
     }, 1000);
@@ -81,6 +95,9 @@ function stop () {
     document.querySelector('#stop').style.display = "none";
     document.querySelector('#start').style.display = "block";
     document.querySelector('#reset').style.display = "block";
+    if (music) {
+        music.pause();
+    }
 
 }
 
@@ -95,4 +112,24 @@ function reset() {
     segs = 0;
 
     document.querySelector('#display').innerHTML = (updateMin() + ":" + updateSegs());
+    if (music) {
+        music.currentTime = 0;
+    }
+}
+
+function musicSelector(value) {
+    if (music) {
+        music.pause();
+    }
+    switch(value) {
+        case 0: music = document.getElementById('forest'); break;
+        case 1: music = document.getElementById('ocean'); break;
+        case 2: music = document.getElementById('rain'); break;
+        case 3: music = document.getElementById('peace'); break;
+        case 4: music = document.getElementById('cafe'); break;
+    }
+
+    if (document.getElementById('stop').style.display == "block") {
+        music.play();
+    }
 }

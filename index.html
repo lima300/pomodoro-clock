@@ -34,9 +34,22 @@
                             <button id="reset" style="display: none" onclick="reset()">RESET</button>
                         </div>
                     </div>
+                    <div class="music-button">
+                        <button onclick="musicSelector(0)">Forest</button>
+                        <button onclick="musicSelector(1)">Ocean</button>
+                        <button onclick="musicSelector(2)">Rain</button>
+                        <button onclick="musicSelector(3)">Peace</button>
+                        <button onclick="musicSelector(4)">Cafe</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <audio loop id="forest" src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/forest.mp3"></audio>
+        <audio loop id="ocean" src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/ocean.mp3"></audio>
+        <audio loop id="rain" src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/rain.mp3"></audio>
+        <audio loop id="peace" src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/peace.mp3"></audio>
+        <audio loop id="cafe" src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/cafe.mp3"></audio>
+        <audio id="alarm" src="audio/Mechanical_Clock_Ring-[AudioTrimmer.com].mp3"></audio>
         <script src="pomodoro.js"></script>
     </body>
 
