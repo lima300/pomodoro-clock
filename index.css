@@ -1,0 +1,178 @@
+/* Font basic */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Css Variables */
+:root {
+    --Roboto: 'Roboto', sans-serif;
+    --Skoofblue: #132235;
+    --Skoofgreenwater: #6ddad3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--Roboto);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: #132235;
+}
+
+.left-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Skoofblue);
+}
+
+.left-box-img {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-bottom: 3px solid rgba(0, 0, 0, .2);
+}
+
+.left-box-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .2), -4px -4px 10px rgba(0, 0, 0, .2);
+}
+
+.left-box-text {
+    flex: 1;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, .2);
+}
+
+.left-box-text p {
+    color: #fff;
+    font-style: italic;
+}
+
+.right-box {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Skoofgreenwater);
+}
+
+.box-content {
+    width: 450px;
+    height: 350px;
+    background-color: var(--Skoofblue);
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .2), -4px -4px 10px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.content-tittle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid rgba(0, 0, 0, .2);
+}
+
+.content-tittle h1 {
+    font-size: 40px;
+}
+
+.content-tittle h1 img {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.content-pomodoro{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.pomodoro-ready {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pomodoro-ready p {
+    margin-left: 10px;
+    font-size: 25px;
+    display: flex;
+}
+
+.pomodoro-ready p img {
+    margin-right: 10px;
+    width: 30px;
+}
+
+.pomodoro-time {
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomodoro-time #display {
+    font-size: 50px;
+}
+
+.pomodoro-button {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.pomodoro-button button {
+    width: 100px;
+    height: 35px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    outline: 0;
+}
+
+.pomodoro-button button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+#start {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+#startB {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+#stop {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#reset {
+    background-color: #3498db;
+    color: #fff;
+}
