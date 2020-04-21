@@ -1,25 +1,43 @@
 <html>
-    <head>
-        <style>
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        </style>
 
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css">
     </head>
+
     <body>
-        <center>
-            <h1>POMOCLOCK</h1>
-            <a id="label">READY ?</a>
-            <a id="break-label" style="display: none"></a>
-            <a id="display">25:00</a>
-            <button id="start" onclick="start()">START</button>
-            <button id="startB" style="display: none" onclick="coffeeTime()">START</button>
-            <button id="stop" style="display: none" onclick="stop()">STOP</button>
-            <button id="reset" style="display: none" onclick="reset()">RESET</button>
-        </center>
+        <div class="container">
+            <div class="left-box">
+                <div class="left-box-img">
+                    <img src="./img/Skoof.png" alt="SKOOF">
+                </div>
+                <div class="left-box-text">
+                    <p>"Faça hoje o que te trará orgulho Amanhã."</p>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="box-content">
+                    <div class="content-tittle">
+                        <h1><img src="./img/clock.png" />POMOCLOCK</h1>
+                    </div>
+                    <div class="content-pomodoro">
+                        <div class="pomodoro-ready">
+                            <p id="label"><img src="./img/flag.png" />READY ?</p>
+                        </div>
+                        <div class="pomodoro-time">
+                            <p id="break-label" style="display: none"></p>
+                            <p id="display">25:00</p>
+                        </div>
+                        <div class="pomodoro-button">
+                            <button id="start" onclick="start()">START</button>
+                            <button id="startB" style="display: none" onclick="coffeeTime()">START</button>
+                            <button id="stop" style="display: none" onclick="stop()">STOP</button>
+                            <button id="reset" style="display: none" onclick="reset()">RESET</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="pomodoro.js"></script>
     </body>
+
 </html>
