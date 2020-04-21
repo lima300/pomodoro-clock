@@ -1,5 +1,5 @@
-let min = 0;
-let segs = 10;
+let min = 25;
+let segs = 0;
 let count = 1;
 let timer;
 let br = false;
@@ -12,6 +12,7 @@ function start() {
     document.querySelector('#reset').style.display = "none";
     document.querySelector('#label').style.display = "block";
     document.querySelector('#break-label').style.display = "none";
+    alarm.pause();
 
     document.querySelector('#label').innerHTML = ("Session " + count);
 
@@ -48,6 +49,7 @@ function start() {
 function coffeeTime() {
     document.querySelector('#startB').style.display = "none";
     document.querySelector('#stop').style.display = "block";
+    alarm.pause();
     if (count < 5) {
         min = 1;
     } else {
