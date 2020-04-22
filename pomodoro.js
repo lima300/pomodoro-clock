@@ -121,7 +121,7 @@ function reset() {
 
 function musicSelector(value) {
     if (music) {
-        music.pause();
+       music.pause()
     }
     switch(value) {
         case 0: music = document.getElementById('forest'); break;
@@ -131,7 +131,20 @@ function musicSelector(value) {
         case 4: music = document.getElementById('cafe'); break;
     }
 
+    activeModalNotification(music.attributes.id.nodeValue)
+
     if (document.getElementById('stop').style.display == "block") {
         music.play();
     }
+}
+
+function activeModalNotification(musicName) {
+    const notify = document.getElementById('notification')
+    const notifycontent = document.getElementById('notification-content')
+    notifycontent.textContent = `Musica Ambiente ${musicName} Selecionado!`
+    notify.style.display = 'block'
+    const timernotify = setInterval(() => {
+        notify.style.display = 'none'
+        clearInterval(timernotify)
+    }, 3000)
 }
