@@ -10,8 +10,21 @@
                 <div class="left-box-img">
                     <img src="./img/Skoof.png" alt="SKOOF">
                 </div>
+                <div class="left-box-music">
+                    <div class="music-tittle">
+                        <p>Música Ambiente</p>
+                    </div>
+                    <div class="music-button">
+                        <button class="green-btn" onclick="musicSelector(0)">Forest</button>
+                        <button class="yellow-btn" onclick="musicSelector(1)">Ocean</button>
+                        <button class="red-btn" onclick="musicSelector(2)">Rain</button>
+                        <button class="blue-btn" onclick="musicSelector(3)">Peace</button>
+                        <button onclick="musicSelector(4)">Cafe</button>
+                    </div>
+                </div>
                 <div class="left-box-text">
-                    <p>"Faça hoje o que te trará orgulho Amanhã."</p>
+                    <h3>Lembre-se:</h3>
+                    <p id="motivate-message">"Faça hoje o que te trará orgulho Amanhã."</p>
                 </div>
             </div>
             <div class="right-box">
@@ -28,19 +41,15 @@
                             <p id="display">25:00</p>
                         </div>
                         <div class="pomodoro-button">
-                            <button id="start" onclick="start()">START</button>
-                            <button id="startB" style="display: none" onclick="coffeeTime()">START</button>
-                            <button id="stop" style="display: none" onclick="stop()">STOP</button>
-                            <button id="reset" style="display: none" onclick="reset()">RESET</button>
+                            <button id="start" class="green-btn" onclick="start()">START</button>
+                            <button id="startB" class="yellow-btn" style="display: none" onclick="coffeeTime()">START</button>
+                            <button id="stop" class="red-btn" style="display: none" onclick="stop()">STOP</button>
+                            <button id="reset" class="blue-btn" style="display: none" onclick="reset()">RESET</button>
                         </div>
                     </div>
-                    <div class="music-button">
-                        <button onclick="musicSelector(0)">Forest</button>
-                        <button onclick="musicSelector(1)">Ocean</button>
-                        <button onclick="musicSelector(2)">Rain</button>
-                        <button onclick="musicSelector(3)">Peace</button>
-                        <button onclick="musicSelector(4)">Cafe</button>
-                    </div>
+                </div>
+                <div class="notification" id="notification">
+                    <p id="notification-content"></p>
                 </div>
             </div>
         </div>
@@ -51,6 +60,7 @@
         <audio loop id="cafe" src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/cafe.mp3"></audio>
         <audio id="alarm" src="audio/Mechanical_Clock_Ring-[AudioTrimmer.com].mp3"></audio>
         <script src="pomodoro.js"></script>
+        <script src="animate.js"></script>
     </body>
 
 </html>
