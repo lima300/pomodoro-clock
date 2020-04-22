@@ -98,6 +98,23 @@ body {
     padding: 10px;
 }
 
+.left-box-text .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.left-box-text .social-media img {
+    width: 20px;
+}
+
+.left-box-text .social-media a {
+    margin-left: 5px;
+    color: #fff;
+    text-decoration: unset;
+}
+
 .right-box {
     flex: 3;
     display: flex;
